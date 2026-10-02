@@ -35,7 +35,7 @@ a { color: inherit; }
   border-bottom: 1px solid var(--line);
 }
 .brand { font-size: 14px; font-weight: 800; text-decoration: none; }
-.brand span { color: var(--accent-dark); }
+.brand span { color: inherit; }
 .nav-links {
   display: flex;
   gap: 30px;
