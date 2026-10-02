@@ -127,7 +127,7 @@ a { color: inherit; }
 .contact-links a { font-size: 14px; font-weight: 700; text-decoration-color: var(--accent); text-underline-offset: 5px; }
 .contact-links span { color: var(--accent-dark); }
 :focus-visible { outline: 3px solid var(--accent-dark); outline-offset: 4px; }
-@keyframes arrive { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); }(max-width: 700px) {
+ arrive { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); }(max-width: 700px) {
   .site-header, .content-section, .contact-section { width: min(100% - 36px, 560px); }
   .nav-shell { min-height: 66px; }
   .nav-links { gap: 16px; }
