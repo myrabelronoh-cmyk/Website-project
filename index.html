@@ -3,18 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Project</title>
+    <meta name="description" content="Myrabel Ronoh's web development portfolio, testimonials, projects, and contact details.">
+    <title>Myrabel Ronoh | Web Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-     <header>
-        <h1>My Portfolio</h1>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#">Testimonials</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
+    <header class="site-header" id="home">
+        <nav class="nav-shell" aria-label="Main navigation">
+            <a class="brand" href="#home">Myrabel <span>Ronoh</span></a>
+            <ul class="nav-links">
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <div class="intro">
+            <p class="eyebrow">WEB DEVELOPER / PORTFOLIO 2026</p>
+            <h1>Thoughtful ideas,<br><span>made for the web.</span></h1>
+            <p class="intro-copy">I'm Myrabel, an aspiring web developer learning to turn clear ideas into useful, welcoming digital experiences.</p>
+            <a class="text-link" href="#projects">Explore my work <span aria-hidden="true">&#8595;</span></a>
+        </div>
     </header>
+
+    <main>
+        <section class="content-section" id="testimonials" aria-labelledby="testimonials-title">
+            <div class="section-heading">
+                <p class="eyebrow">KIND WORDS</p>
+                <span class="section-number">01 / 03</span>
+            </div>
+            <div class="section-title-row">
+                <h2 id="testimonials-title">Notes from<br>collaborators.</h2>
+                <p>Sample feedback for this portfolio exercise. Replace it with real testimonials before publishing.</p>
+            </div>
+            <div class="testimonials-grid" id="testimonials-list" aria-live="polite"></div>
+        </section>
+
+        <section class="content-section" id="projects" aria-labelledby="projects-title">
+            <div class="section-heading">
+                <p class="eyebrow">SELECTED PRACTICE</p>
+                <span class="section-number">02 / 03</span>
+            </div>
+            <div class="section-title-row">
+                <h2 id="projects-title">Made while<br>learning.</h2>
+                <p>A few small projects where I put new ideas into practice.</p>
+            </div>
+            <div class="projects-grid" id="projects-grid"></div>
+        </section>
+
+        <section class="contact-section" id="contact" aria-labelledby="contact-title">
+            <div class="section-heading">
+                <p class="eyebrow">GET IN TOUCH</p>
+                <span class="section-number">03 / 03</span>
+            </div>
+            <div class="contact-content">
+                <p class="eyebrow">HAVE A GOOD ONE IN MIND?</p>
+                <h2 id="contact-title">Let's make<br><span>it real.</span></h2>
+                <div class="contact-links">
+                    <a href="mailto:ronoh@example.com">ronoh@example.com <span aria-hidden="true">&#8599;</span></a>
+                    <a href="https://github.com/myrabelronoh-cmyk" target="_blank" rel="noreferrer">GitHub profile <span aria-hidden="true">&#8599;</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
