@@ -1,70 +1,66 @@
-const testimonials = {
-  "01": {
-    quote: "Your collaborative approach made the project easy to move forward.",
-    name: "Project collaborator",
-    note: "Sample testimonial"
+const testimonialsData = {
+  t1: {
+    name: "John Makalele",
+    role: "Project Manager",
+    quote: "A driven developer who delivers clean and efficient web solutions."
   },
-  "02": {
-    quote: "You brought care and curiosity to every step of the work.",
-    name: "Learning partner",
-    note: "Sample testimonial"
+  t2: {
+    name: "Sarah Lee",
+    role: "Project Collaborator",
+    quote: "Great attention to detail and awesome collaboration on design components."
   }
 };
 
-const projects = [
+
+const projectsData = [
   {
     title: "Portfolio Website",
-    description: "A single-page site introducing my work and making it easy to get in touch.",
-    technologies: ["HTML", "CSS", "JavaScript"]
+    description: "A clean, single-page personal portfolio built with HTML, CSS, and JS.",
+    techUsed: "HTML, CSS, JavaScript"
   },
   {
-    title: "Project Two",
-    description: "Replace this description with a short summary of another project you have built.",
-    technologies: ["JavaScript", "HTML", "CSS"]
+    title: "Task Tracker App",
+    description: "An interactive web application to organize daily tasks and deadlines.",
+    techUsed: "JavaScript, HTML, CSS"
   }
 ];
 
-const testimonialContainer = document.querySelector("#test-container");
-const projectsContainer = document.querySelector("#projects-container");
 
-for (const [number, testimonial] of Object.entries(testimonials)) {
-  const card = document.createElement("article");
-  card.className = "testimonial-card";
+const testContainer = document.getElementById("test-container");
 
-  const quote = document.createElement("blockquote");
-  quote.textContent = `“${testimonial.quote}”`;
+for (const key in testimonialsData) {
+  const item = testimonialsData[key];
 
-  const name = document.createElement("p");
-  name.className = "testimonial-name";
-  name.textContent = testimonial.name;
 
-  const note = document.createElement("p");
-  note.className = "sample-note";
-  note.textContent = `${number} / ${testimonial.note}`;
+  const card = document.createElement("div");
+  card.className = "card";
 
-  card.append(quote, name, note);
-  testimonialContainer.append(card);
+
+  card.innerHTML = `
+    <h3>${item.name}</h3>
+    <p><strong>${item.role}</strong></p>
+    <p>"${item.quote}"</p>
+  `;
+
+
+  testContainer.appendChild(card);
 }
 
-for (const [index, project] of projects.entries()) {
-  const card = document.createElement("article");
-  card.className = "project-card";
 
-  const heading = document.createElement("h3");
-  heading.textContent = project.title;
+const projectsContainer = document.getElementById("projects-container");
 
-  const description = document.createElement("p");
-  description.className = "project-description";
-  description.textContent = project.description;
+projectsData.forEach((project) => {
+  
+  const card = document.createElement("div");
+  card.className = "card";
 
-  const technologies = document.createElement("p");
-  technologies.className = "project-technologies";
-  technologies.textContent = project.technologies.join(" · ");
 
-  const projectNumber = document.createElement("p");
-  projectNumber.className = "project-number";
-  projectNumber.textContent = `PROJECT / ${String(index + 1).padStart(2, "0")}`;
+  card.innerHTML = `
+    <h3>${project.title}</h3>
+    <p>${project.description}</p>
+    <p><small><strong>Tech:</strong> ${project.techUsed}</small></p>
+  `;
 
-  card.append(projectNumber, heading, description, technologies);
-  projectsContainer.append(card);
-}
+
+  projectsContainer.appendChild(card);
+});
