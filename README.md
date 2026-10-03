@@ -1,48 +1,39 @@
-# Myrabel Ronoh | Web Developer Portfolio
+# Portfolio Website
 
-A responsive, single-page portfolio featuring JavaScript-rendered testimonials, selected projects, and contact links.
+A simple single-page portfolio website built with plain HTML, CSS, and JavaScript. The page includes a hero/header, project cards, testimonial cards, and contact links rendered from JavaScript data arrays.
 
-- **Repository:** [myrabelronoh-cmyk/Website-project](https://github.com/myrabelronoh-cmyk/Website-project)
-- **GitHub Pages URL:** [Website-project portfolio](https://myrabelronoh-cmyk.github.io/Website-project/) (deployment pending)
+## Live Demo
+
+https://yourusername.github.io/your-repo-name
 
 ## Features
 
-- Navigation to testimonials, projects, and contact information
-- Testimonials stored in a JavaScript object and rendered with a loop
-- Project cards rendered from an array of JavaScript objects
-- Responsive layout, keyboard focus styles, and reduced-motion support
-- Email and GitHub contact links
+- Responsive single-page layout
+- Clear portfolio navigation
+- Dynamic project and testimonial cards generated from JavaScript objects
+- Clean, modern styling with separate HTML, CSS, and JS files
+- Contact section with links for email and GitHub
 
-## Technologies
+## Technologies Used
 
-- HTML5 for page structure
-- CSS3 for responsive presentation and motion preferences
-- Vanilla JavaScript for content data and rendering
-- GitHub Pages for hosting
+- HTML5
+- CSS3
+- JavaScript
+- Git and GitHub
 
-## Run Locally
+## How to Run Locally
 
 1. Clone the repository:
-
-   ```sh
-   git clone https://github.com/myrabelronoh-cmyk/Website-project.git
-   cd Website-project
+   ```bash
+   git clone https://github.com/yourusername/your-repo-name.git
    ```
-
-2. Open `index.html` in a browser. No build step or package installation is needed.
+2. Open the project folder.
+3. Open `index.html` in a browser, or run a local server:
+   ```bash
+   python3 -m http.server 8000
+   ```
+4. Visit `http://localhost:8000` in your browser.
 
 ## What I Learned
 
-I learned how to keep content in JavaScript data structures and use loops to create repeated page elements instead of hard-coding them. I also practiced building a responsive layout with plain CSS and preparing a static website for GitHub Pages.
-
-## Project Files
-
-- `index.html` - page structure and content sections
-- `style.css` - responsive presentation
-- `script.js` - testimonial object and project array with rendering loops
-
-The testimonial entries are sample assignment content; replace them with genuine feedback used with permission. Replace `ronoh@example.com` with the email address you intend to publish.
-
-## Deployment
-
-GitHub Pages is not active for this repository yet. In **Settings → Pages**, select **Deploy from a branch**, choose `main` and `/ (root)`, then save. Confirm the URL above loads before submitting the live demo.
+This project helped me practice building a structured front-end portfolio with semantic HTML, modular CSS, and JavaScript-driven rendering. It also reinforced the importance of clean separation between content, styling, and application logic.

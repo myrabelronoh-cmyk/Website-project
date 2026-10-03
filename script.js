@@ -1,76 +1,70 @@
 const testimonials = {
   "01": {
-    quote: "Myrabel brings curiosity to every challenge and keeps learning until the details feel right.",
+    quote: "Your collaborative approach made the project easy to move forward.",
     name: "Project collaborator",
-    context: "Sample testimonial"
+    note: "Sample testimonial"
   },
   "02": {
-    quote: "A thoughtful, steady approach to turning a rough idea into something clear and useful.",
+    quote: "You brought care and curiosity to every step of the work.",
     name: "Learning partner",
-    context: "Sample testimonial"
+    note: "Sample testimonial"
   }
 };
 
 const projects = [
   {
-    title: "Personal Portfolio",
-    description: "A responsive portfolio bringing together testimonials, selected work, and contact details.",
-    tech: "HTML · CSS · JavaScript",
-    number: "01"
+    title: "Portfolio Website",
+    description: "A single-page site introducing my work and making it easy to get in touch.",
+    technologies: ["HTML", "CSS", "JavaScript"]
   },
   {
-    title: "Product Inventory",
-    description: "A JavaScript exercise for keeping a product list organized with add, update, and remove actions.",
-    tech: "JavaScript · Arrays · Functions",
-    number: "02"
+    title: "Project Two",
+    description: "Replace this description with a short summary of another project you have built.",
+    technologies: ["JavaScript", "HTML", "CSS"]
   }
 ];
 
-const testimonialsList = document.querySelector("#testimonials-list");
-const projectsGrid = document.querySelector("#projects-grid");
+const testimonialContainer = document.querySelector("#test-container");
+const projectsContainer = document.querySelector("#projects-container");
 
 for (const [number, testimonial] of Object.entries(testimonials)) {
   const card = document.createElement("article");
   card.className = "testimonial-card";
 
-  const index = document.createElement("p");
-  index.className = "item-number";
-  index.textContent = `NOTE / ${number}`;
-
   const quote = document.createElement("blockquote");
   quote.textContent = `“${testimonial.quote}”`;
 
-  const attribution = document.createElement("p");
-  attribution.className = "attribution";
-  attribution.textContent = testimonial.name;
+  const name = document.createElement("p");
+  name.className = "testimonial-name";
+  name.textContent = testimonial.name;
 
-  const context = document.createElement("p");
-  context.className = "item-context";
-  context.textContent = testimonial.context;
+  const note = document.createElement("p");
+  note.className = "sample-note";
+  note.textContent = `${number} / ${testimonial.note}`;
 
-  card.append(index, quote, attribution, context);
-  testimonialsList.append(card);
+  card.append(quote, name, note);
+  testimonialContainer.append(card);
 }
 
-for (const project of projects) {
+for (const [index, project] of projects.entries()) {
   const card = document.createElement("article");
   card.className = "project-card";
 
-  const index = document.createElement("p");
-  index.className = "item-number";
-  index.textContent = `PROJECT / ${project.number}`;
-
-  const title = document.createElement("h3");
-  title.textContent = project.title;
+  const heading = document.createElement("h3");
+  heading.textContent = project.title;
 
   const description = document.createElement("p");
   description.className = "project-description";
   description.textContent = project.description;
 
-  const tech = document.createElement("p");
-  tech.className = "project-tech";
-  tech.textContent = project.tech;
+  const technologies = document.createElement("p");
+  technologies.className = "project-technologies";
+  technologies.textContent = project.technologies.join(" · ");
 
-  card.append(index, title, description, tech);
-  projectsGrid.append(card);
+  const projectNumber = document.createElement("p");
+  projectNumber.className = "project-number";
+  projectNumber.textContent = `PROJECT / ${String(index + 1).padStart(2, "0")}`;
+
+  card.append(projectNumber, heading, description, technologies);
+  projectsContainer.append(card);
 }
