@@ -8,7 +8,7 @@
 body {
   line-height: 1.6;
   color: #333;
-  background-color: #f4f4f9;
+  background-color: #d5d5e9;
   padding-top: 70px;
 }
 
@@ -34,6 +34,7 @@ header h1 {
   list-style: none;
   display: flex;
   gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .navbar a {
@@ -66,4 +67,30 @@ h2 {
   margin-bottom: 1rem;
   border-bottom: 2px solid #eee;
   padding-bottom: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding-top: 110px;
+  }
+
+  header {
+    padding: 0.9rem 1rem;
+    align-items: flex-start;
+    gap: 0.75rem;
+    flex-direction: column;
+  }
+
+  .navbar ul {
+    gap: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  main {
+    padding: 1rem 0.75rem 2rem;
+  }
+
+  section {
+    padding: 1.25rem;
+  }
 }
