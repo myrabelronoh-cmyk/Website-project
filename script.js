@@ -8,6 +8,16 @@ const testimonials = {
     quote: "She blends thoughtful design with practical problem-solving in a way that feels effortless.",
     name: "Team collaborator",
     note: "Collaboration review"
+  },
+  "03": {
+    quote: "Her work feels polished, intentional, and easy for users to connect with from the very first glance.",
+    name: "Brand lead",
+    note: "Design review"
+  },
+  "04": {
+    quote: "Amina is thoughtful, reliable, and brings a calm, creative energy that lifts every project.",
+    name: "Client partner",
+    note: "Project reflection"
   }
 };
 
