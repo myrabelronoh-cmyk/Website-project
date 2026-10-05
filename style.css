@@ -69,6 +69,12 @@ h2 {
   padding-bottom: 0.5rem;
 }
 
+.intro-text {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
 @media (max-width: 640px) {
   body {
     padding-top: 110px;
